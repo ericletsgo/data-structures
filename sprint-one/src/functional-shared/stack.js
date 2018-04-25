@@ -1,21 +1,24 @@
 var Stack = function() {
   var someInstance = {};
-  someInstance.size = 0;
+  someInstance.sizeOf = 0;
   someInstance.push = stackMethods.push;
   someInstance.pop = stackMethods.pop;
-  someInstance.getSize = stackMethods.size;
+  someInstance.size = stackMethods.getSize;
   return someInstance;
 };
 
 var stackMethods = {
 	push: function(value) {
-		this.size++;
+		this.sizeOf++;
 	},
 	pop: function() {
-		this.size--;
+		this.sizeOf--;
+		if (this.sizeOf < 0) {
+			this.sizeOf = 0;
+		}
 	},
 	getSize: function() {
-		return this.size;
+		return this.sizeOf;
 	}
 };
 
