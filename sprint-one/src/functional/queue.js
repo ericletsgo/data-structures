@@ -24,7 +24,6 @@ var Queue = function() {
     for (var key in storage) {
       newStorage[index] = storage[key];
     }
-    console.log(storage, newStorage);
     storage = newStorage;
     return itemToRemove;  
   };
