@@ -10,12 +10,16 @@ var Stack = function() {
 var stackMethods = {
 	push: function(value) {
 		this.sizeOf++;
+		this[this.sizeOf] = value;
 	},
 	pop: function() {
+		var itemToRemove = this[this.sizeOf];
+		delete this[this.sizeOf];
 		this.sizeOf--;
 		if (this.sizeOf < 0) {
 			this.sizeOf = 0;
 		}
+		return itemToRemove;
 	},
 	getSize: function() {
 		return this.sizeOf;
