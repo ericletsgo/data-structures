@@ -27,6 +27,7 @@ var LinkedList = function() {
 
   list.contains = function(target) {
     var doesContain = false;
+    
     checkNode = function(node) {
       if (node.value === target) {
         doesContain = true;
@@ -36,7 +37,9 @@ var LinkedList = function() {
         }
       }
     }
+    
     checkNode(list.head);
+    
     return doesContain;
   };
 
@@ -54,4 +57,6 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * addToTail and removeHead are both constant time operations (O(1)). 
+ * contains is a linear time operation (O(n)).
  */
