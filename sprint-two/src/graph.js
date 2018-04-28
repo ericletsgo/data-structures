@@ -60,20 +60,14 @@ Graph.prototype.forEachNode = function(cb) {
   this.storage.forEach(cb);
 };
 
-// Graph.prototype.getIndex = function(value) {
-//   var storage = this.storage;
-//   var indexOfNode;
-  
-//   for (var i = 0; i < storage.length; i++) {
-//     if (storage[i].value === value) {
-//       indexOfNode = i;
-//     }
-//   }
-//   return indexOfNode;
-// };
-
 /*
  * Complexity: What is the time complexity of the above functions?
+ * addNode is a constant time operation.
+ * contains is a linear time operation.
+ * hasEdges is a linear time operation.
+ * addEdge is a constant time operation.
+ * removeEdge is a linear time operation.
+ * forEachNode is a linear time operation.
  */
 
 
