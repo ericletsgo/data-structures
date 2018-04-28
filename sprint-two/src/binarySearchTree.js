@@ -62,4 +62,7 @@ var createNode = function(val) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * insert is a logarithmic time operation.
+ * contains is a logarithmic time operation.
+ * depthFirstLog is a linear time operation.
  */
